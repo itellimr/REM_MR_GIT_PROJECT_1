@@ -1,0 +1,11 @@
+namespace MR_GIT_PROJECT_1.db;
+
+context TABLES2 {
+};
+
+/*@@layout{"layoutInfo":{"x":200,"y":-25.5}}*/
+entity TABLES2TABLE {
+    elem_1 : String(10);
+    elem_2 : String(10);
+    elem_3 : String(10);
+};
