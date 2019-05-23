@@ -1,0 +1,33 @@
+namespace MR_GIT_PROJECT_1.db;
+
+/*@@layout{"layoutInfo":{"x":-287.5703125,"y":-35}}*/
+context CUSTOMER {
+
+    /*@@layout{"layoutInfo":{"x":-579,"y":-223.5}}*/
+    entity Entity_2 {
+        elem_1 : String(10);
+        elem_2 : String(10);
+    };
+};
+
+/*@@layout{"layoutInfo":{"x":-65.12109375,"y":-101}}*/
+entity Entity_1 {
+    elem_1 : String(10);
+};
+
+/*@@layout{"layoutInfo":{"x":222.87890625,"y":15}}*/
+type Structure_2 {
+    elem_1 : String(10);
+    elem_2 : String(10);
+};
+
+/*@@layout{"layoutInfo":{"x":259.5703125,"y":-120}}*/
+view View_3 as
+    select from (
+                   Entity_1
+        inner join CUSTOMER.Entity_2 as Entity_2 on
+            Entity_1.elem_1 = Entity_2.elem_1
+    )
+    {
+        Entity_1.elem_1
+    };
