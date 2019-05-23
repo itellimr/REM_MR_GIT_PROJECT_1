@@ -3,11 +3,11 @@ _schema-version: '2.1'
 version: 0.0.1
 
 modules:
- - name: db
+ - name: MODELDB
    type: hdb
-   path: db
+   path: MODELDB
    requires:
-    - name: hdi_db
+    - name: hdi_MODELDB
 
 
  - name: PERSISTDB
@@ -17,7 +17,7 @@ modules:
     - name: hdi_PERSISTDB
 
 resources:
- - name: hdi_db
+ - name: hdi_MODELDB
    properties:
       hdi-container-name: ${service-name}
    type: com.sap.xs.hdi-container
