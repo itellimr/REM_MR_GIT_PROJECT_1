@@ -9,8 +9,21 @@ modules:
    requires:
     - name: hdi_db
 
+
+ - name: PERSISTDB
+   type: hdb
+   path: PERSISTDB
+   requires:
+    - name: hdi_PERSISTDB
+
 resources:
  - name: hdi_db
    properties:
       hdi-container-name: ${service-name}
    type: com.sap.xs.hdi-container
+
+ - name: hdi_PERSISTDB
+   properties:
+      hdi-container-name_2: ${service-name}
+   type: com.sap.xs.hdi-container
+
