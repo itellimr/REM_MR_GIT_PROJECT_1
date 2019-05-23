@@ -1,0 +1,25 @@
+{
+	"format_version": 1,
+	"imports": [{
+		"target_table": "MR_GIT_PROJECT_1.PERSISTDB.SourceData::DELIVERYLINE",
+		"source_data": {
+			"data_type": "CSV",
+			"file_name": "MR_GIT_PROJECT_1.PERSISTDB.SourceData::DELIVERYLINE.csv",
+			"has_header": true,
+			"type_config": {
+				"delimiter": ",",
+				"do_quote": true
+			}
+		},
+		"import_settings": {
+			"import_columns": [
+				"DELIVERY_ID",
+				"DELIVERYLINE_ID",
+				"CUSTOMER",
+				"MATERIAL",
+				"DELIVERY_QUANTITY",
+				"DELIVERY_DATE"
+			]
+		}
+	}]
+}

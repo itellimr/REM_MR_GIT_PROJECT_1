@@ -1,0 +1,12 @@
+namespace MR_GIT_PROJECT_1.PERSISTDB.SourceData;
+
+
+/*@@layout{"layoutInfo":{"x":-180,"y":-88.5}}*/
+entity DELIVERYLINE {
+    DELIVERY_ID       : Integer;
+    DELIVERYLINE_ID   : Integer;
+    CUSTOMER          : String(100);
+    MATERIAL          : String(100);
+    DELIVERY_QUANTITY : Integer;
+    DELIVERY_DATE     : LocalDate;
+};
