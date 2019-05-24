@@ -1,29 +1,36 @@
 ID: MR_GIT_APP_1
 _schema-version: '2.1'
 version: 0.0.1
-
 modules:
- - name: MODELDB
-   type: hdb
-   path: MODELDB
-   requires:
-    - name: hdi_MODELDB
-
-
- - name: PERSISTDB
-   type: hdb
-   path: PERSISTDB
-   requires:
-    - name: hdi_PERSISTDB
-
+  - name: MODELDB
+    type: hdb
+    path: MODELDB
+    requires:
+      - name: hdi_MODELDB
+        properties:
+          TARGET_CONTAINER: '~{hdi-container-name}'
+      - name: cross-container-service-1
+        group: SERVICE_REPLACEMENTS
+        properties:
+          key: ServiceName_1
+          service: '~{the-service-name}'
+  - name: PERSISTDB
+    type: hdb
+    path: PERSISTDB
+    requires:
+      - name: hdi_PERSISTDB
 resources:
- - name: hdi_MODELDB
-   properties:
-      hdi-container-name: ${service-name}
-   type: com.sap.xs.hdi-container
-
- - name: hdi_PERSISTDB
-   properties:
-      hdi-container-name_2: ${service-name}
-   type: com.sap.xs.hdi-container
-
+  - name: hdi_MODELDB
+    properties:
+      hdi-container-name: '${service-name}'
+    type: com.sap.xs.hdi-container
+  - name: hdi_PERSISTDB
+    properties:
+      hdi-container-name_2: '${service-name}'
+    type: com.sap.xs.hdi-container
+  - name: cross-container-service-1
+    parameters:
+      service-name: IMATT-k6gzaq9llmcoi1s0-MR_GIT_PROJECT_1-hdi_PERSISTDB
+    properties:
+      the-service-name: '${service-name}'
+    type: org.cloudfoundry.existing-service

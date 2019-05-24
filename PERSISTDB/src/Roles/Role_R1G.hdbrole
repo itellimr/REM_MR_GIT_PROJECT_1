@@ -1,0 +1,16 @@
+{ 
+  "role": { 
+    "name": "MR_GIT_PROJECT_1.PERSISTDB.Roles::Role_R1#", 
+    "schema_privileges": [{
+		   "privileges_with_grant_option": ["SELECT METADATA", 
+		    			  "SELECT CDS METADATA", 
+		    			  "SELECT", 
+		    			  "INSERT", 
+		    			  "EXECUTE", 
+		    			  "DELETE", 
+		    			  "UPDATE", 
+		    			  "CREATE TEMPORARY TABLE"
+		   ]
+		}]
+  }
+} 

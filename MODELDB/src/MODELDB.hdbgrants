@@ -1,0 +1,10 @@
+{
+  "ServiceName_1": {
+    "object_owner" : {
+      "container_roles":["MR_GIT_PROJECT_1.PERSISTDB.Roles::Role_R1#"]
+    },
+    "application_user" : {
+      "container_roles":["MR_GIT_PROJECT_1.PERSISTDB.Roles::Role_R1"]
+    }
+  }
+}
